@@ -4,6 +4,7 @@ import Dashboard from "./Pages/Dashboard.jsx";
 import "./App.css";
 import Inbox from "./Pages/subpages/Inbox/inbox.jsx";
 import Dashmenu from "./Pages/subpages/Inbox/Dashmenu.jsx";
+import Agenda from "./Pages/subpages/Agenda.jsx";
 function App() {  
 
   return (  
@@ -14,6 +15,7 @@ function App() {
        <Route path="/Dashboard/*" element={<Dashboard />} >
         <Route path="inbox" element={<Inbox/>} />
         <Route path="menu" element={<Dashmenu/>} />
+        <Route path="Agenda" element={<Agenda/>} />
        </Route>
     </Routes>
     </BrowserRouter>

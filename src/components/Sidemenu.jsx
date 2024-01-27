@@ -13,6 +13,7 @@ const SideMenu = () => {
       <sidebar className="flex flex-col justify-between gap-8 bg-[#ff5c01] text-white min-h-screen max-h-screen w-80 p-4 overflow-y-auto">
         <section>
           <div className="logo flex items-center flex-col gap-4 mb-8">
+            <img src="https://seeklogo.com/images/I/italcol-logo-4F395C71C7-seeklogo.com.png" className="w-4/5" />
             <img
               src="https://global.tiffin.edu/img/article/funciones-de-un-administrador-de-servicios-de-salud.webp"
               className="w-12 h-12 bg-secondary ring rounded-xl"
@@ -78,7 +79,7 @@ const SideMenu = () => {
             </li>
             <li>
               <Link
-                to="inbox"
+                to="Agenda"
                 className="flex items-center gap-4 p-2 hover:bg-[#e2d224] transition-colors rounded-lg"
               >
                 <svg
