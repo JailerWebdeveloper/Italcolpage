@@ -12,7 +12,7 @@ import { RiMenu2Line } from "react-icons/ri";
 const SideMenu = () => {
   return (
     <Fragment>
-      <sidebar className="md:flex hidden  flex-col justify-between gap-8  bg-primary h-screen  w-80 p-4 overflow-y-auto">
+      <sidebar className="md:flex hidden text-white  flex-col justify-between gap-8  bg-primary h-screen  w-80 p-4 overflow-y-auto">
         <section>
           <div className="logo flex items-center flex-col gap-4 mb-8">
    <p className="font-bold uppercase text-center text-3xl  w-full break-all antialiased">IA EXPRESS SUPERTOPANGURREN LAGAN</p>
@@ -27,7 +27,7 @@ const SideMenu = () => {
             <li>
               <Link
                 to="menu"
-                className="flex items-center gap-4 p-2 hover:bg-primary transition-colors rounded-lg"
+                className="flex items-center gap-4 p-2 hover:bg-accent transition-colors rounded-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -43,13 +43,13 @@ const SideMenu = () => {
                     d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z"
                   />
                 </svg>
-                <span>Inicio</span>
+                <span>Entrenamiento</span>
               </Link>
             </li>
             <li>
               <Link
                 to="inbox"
-                className="flex items-center gap-4 p-2 hover:bg-primary transition-colors rounded-lg"
+                className="flex items-center gap-4 p-2 hover:bg-accent transition-colors rounded-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,13 +65,13 @@ const SideMenu = () => {
                     d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
                   />
                 </svg>
-                <span>Notificaciones</span>
+                <span>Simulacion</span>
               </Link>
             </li>
             <li>
               <Link
                 to="Agenda"
-                className="flex items-center gap-4 p-2 hover:bg-primary transition-colors rounded-lg"
+                className="flex items-center gap-4 p-2 hover:bg-accent transition-colors rounded-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

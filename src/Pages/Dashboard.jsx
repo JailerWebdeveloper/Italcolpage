@@ -8,7 +8,7 @@ const Dashboard = () => {
         <div className="flex md:flex-row  flex-col relative w-screen">
           <SideMenu />
 
-          <div className="w-full flex md:block bg-base flex-col relative h-full p-4">
+          <div className="w-full flex md:block bg-base  overflow-y-auto flex-col relative h-screen p-4">
 
             <Outlet />
           </div>
