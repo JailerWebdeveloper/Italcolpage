@@ -47,17 +47,34 @@ const Dashmenu = () => {
     setFile(file);
   };
 
+  const formatedata={
+    "rataAprendizaje":Number(formData.rataAprendizaje),
+    "numIteraciones":Number(formData.numIteraciones),
+    "errorMaximo":Number(formData.errorMaximo),    
+  }
+
+  const archivo ={
+      archivo: File
+  }
+
+  console.log(archivo)
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const formatedata={
+      "rataAprendizaje":Number(formData.rataAprendizaje),
+      "numIteraciones":Number(formData.numIteraciones),
+      "errorMaximo":Number(formData.errorMaximo),    
+    }
     try {
       const formDataResponse = await axios.post(
         "http://localhost:3001/API/V1/traerdatos",
-        formData
+        formatedata
       );
 
       const fileResponse = await axios.post(
         "http://localhost:3001/API/V1/subir-archivo",
-        File
+        archivo
       );
       console.log("Respuesta del formulario API:", formDataResponse.data);
       console.log("Respuesta del archivo API:", fileResponse.data);
@@ -137,7 +154,7 @@ const Dashmenu = () => {
                     </span>
                   </div>
                   <input
-                    type="number"
+                    type="text"
                     name="errorMaximo"
                     placeholder="ErrorMaximo"
                     className="input input-primary input-bordered w-full max-w-xs"
