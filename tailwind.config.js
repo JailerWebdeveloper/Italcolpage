@@ -9,29 +9,40 @@ export default {
   },
   daisyui: {
     themes: [
-      {
-        mytheme: {
-        
-"primary": "#f70",
-        
-"secondary": "#ffa",
-        
-"accent": "#ffffff",
-        
-"neutral": "#ffffff",
-        
-"base-100": "#ffffff",
-        
-"info": "#ffffff",
-        
-"success": "#00ffff",
-        
-"warning": "#ffffff",
-        
-"error": "#ffffff",
-        },
-      },
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "garden",
+      "forest",
+      "aqua",
+      "lofi",
+      "pastel",
+      "fantasy",
+      "wireframe",
+      "black",
+      "luxury",
+      "dracula",
+      "cmyk",
+      "autumn",
+      "business",
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+      "dim",
+      "nord",
+      "sunset",
     ],
   },
+
   plugins: [require("daisyui")],
 }

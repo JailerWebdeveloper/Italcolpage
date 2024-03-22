@@ -4,11 +4,12 @@ import SideMenu from "../components/Sidemenu.jsx";
 const Dashboard = () => {
   return (
     <>
-      <div className="bg-slate-200 overflow-y-auto w-screen h-screen antialiased text-slate-900 selection:bg-blue-900 selection:text-white">
-        <div className="flex flex-row relative w-screen">
+      <div className=" overflow-y-auto w-screen h-screen antialiased ">
+        <div className="flex md:flex-row  flex-col relative w-screen">
           <SideMenu />
 
-          <div className="w-full  h-screen p-4">
+          <div className="w-full flex md:block bg-base flex-col relative h-full p-4">
+
             <Outlet />
           </div>
         </div>

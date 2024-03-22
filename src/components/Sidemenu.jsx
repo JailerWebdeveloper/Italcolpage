@@ -1,42 +1,33 @@
 import { Fragment } from "react";
 import {
-    MdCalendarMonth,
-    MdCoPresent,
-    MdDiversity1,
-    MdInsertChartOutlined,
-  } from "react-icons/md";
+  MdCalendarMonth,
+  MdCoPresent,
+  MdDiversity1,
+  MdInsertChartOutlined,
+} from "react-icons/md";
 
-  import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { RiMenu2Line } from "react-icons/ri";
+
 const SideMenu = () => {
   return (
     <Fragment>
-      <sidebar className="flex flex-col justify-between gap-8 bg-[#ff5c01] text-white min-h-screen max-h-screen w-80 p-4 overflow-y-auto">
+      <sidebar className="md:flex hidden  flex-col justify-between gap-8  bg-primary h-screen  w-80 p-4 overflow-y-auto">
         <section>
           <div className="logo flex items-center flex-col gap-4 mb-8">
-            <img src="https://seeklogo.com/images/I/italcol-logo-4F395C71C7-seeklogo.com.png" className="w-4/5" />
-            <img
-              src="https://global.tiffin.edu/img/article/funciones-de-un-administrador-de-servicios-de-salud.webp"
-              className="w-12 h-12 bg-secondary ring rounded-xl"
-            />
+   <p className="font-bold uppercase text-center text-3xl  w-full break-all antialiased">IA EXPRESS SUPERTOPANGURREN LAGAN</p>
+
             <div>
-              <h3 className="font-bold  text-2xl ">Jose Joestar</h3>
-              <p className=" text-sm text-center">
-                Gerente de zona
-              </p>
+              <h3 className="font-bold  text-2xl ">Jailer vega meza</h3>
+              <h3 className="font-bold  text-2xl ">Orlando seoanes</h3>
             </div>
           </div>
-          <form>
-            <input
-              type="text"
-              className="w-full p-2 rounded-lg outline-none bg-gray-200"
-              placeholder="Buscador"
-            />
-          </form>
+
           <ul className="mt-4 mb-8">
             <li>
               <Link
-               to="menu"
-                className="flex items-center gap-4 p-2 hover:bg-[#e2d224] transition-colors rounded-lg"
+                to="menu"
+                className="flex items-center gap-4 p-2 hover:bg-primary transition-colors rounded-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +49,7 @@ const SideMenu = () => {
             <li>
               <Link
                 to="inbox"
-                className="flex items-center gap-4 p-2 hover:bg-[#e2d224] transition-colors rounded-lg"
+                className="flex items-center gap-4 p-2 hover:bg-primary transition-colors rounded-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +71,7 @@ const SideMenu = () => {
             <li>
               <Link
                 to="Agenda"
-                className="flex items-center gap-4 p-2 hover:bg-[#e2d224] transition-colors rounded-lg"
+                className="flex items-center gap-4 p-2 hover:bg-primary transition-colors rounded-lg"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,81 +91,56 @@ const SideMenu = () => {
               </Link>
             </li>
           </ul>
-          <hr className="my-8" />
-          <h5 className="uppercase font-semibold text-xs  tracking-[2px] mb-4">
-            Menu
-          </h5>
-          <ul>
-            <li>
-              <a
-                href="#"
-                className="flex items-center gap-4 p-2 hover:bg-[#e2d224] transition-colors rounded-lg"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
-                  />
-                </svg>
-                <span>Metas</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center gap-4 p-2 hover:bg-[#e2d224] transition-colors rounded-lg"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"
-                  />
-                </svg>
-                <span>Visitas</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center gap-4 p-2 hover:bg-[#e2d224] transition-colors rounded-lg"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
-                  />
-                </svg>
-                <span>Clientes</span>
-              </a>
-            </li>
-          </ul>
-          
+         
         </section>
       </sidebar>
+
+      <div className="navbar bg-base-100 md:hidden ">
+        <div className="flex-none">
+          <div className="drawer lg:drawer-open z-40">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content flex flex-col items-center justify-center">
+
+            </div>
+            <div className="drawer-side">
+              <label
+                htmlFor="my-drawer-2"
+                aria-label="close sidebar"
+                className="drawer-overlay"
+              ></label>
+              <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+                {/* Sidebar content here */}
+                <li>
+                  <a>Sidebar Item 1</a>
+                </li>
+                <li>
+                  <a>Sidebar Item 2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1">
+          <a className="btn btn-ghost text-xl">IA SUPERTOPANGURREN</a>
+        </div>
+        <div className="flex-none">
+          <button className="btn btn-square btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block w-5 h-5 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </Fragment>
   );
 };

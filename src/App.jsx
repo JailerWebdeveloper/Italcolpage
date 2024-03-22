@@ -11,8 +11,8 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Navigate to="/Dashboard" />} />
-
        <Route path="/Dashboard/*" element={<Dashboard />} >
+       <Route path="" element={<Dashmenu/>} />
         <Route path="inbox" element={<Inbox/>} />
         <Route path="menu" element={<Dashmenu/>} />
         <Route path="Agenda" element={<Agenda/>} />

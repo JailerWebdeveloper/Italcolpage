@@ -1,2 +1,2 @@
  
- export * from './bears.store';
+ export * from './bears.store'; 
