@@ -3,8 +3,9 @@ import axios from "axios";
 import Whitecard from "../../../components/Whitecard";
 
 export default function Inbox() {
-  const [file, setFile] = useState(null);
-  const [resultado, setResultado] = useState(null);
+  const [File, setFile] = useState(null);
+  const [resultado, setResultado] = useState([]);
+
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
@@ -12,20 +13,38 @@ export default function Inbox() {
   };
 
   const handleSubmit = async (event) => {
+
+
+    const archivo = {
+      archivoExcel: File,
+    };
+
+    
     event.preventDefault();
     try {
       const fileResponse = await axios.post(
         "http://localhost:3001/API/V1/simulacion",
-        file
+        archivo,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
       );
-      console.log("Respuesta del archivo API:", fileResponse.data);
-      setResultado(fileResponse.data);
       alert("Datos enviados correctamente");
+
+      if (fileResponse.status == 200) {
+        const respuesta = await axios.get(
+          "http://localhost:3001/API/V1/resultadoSimulacion"
+        );
+        setResultado(respuesta.data.respuesta);
+      }
     } catch (error) {
       console.error("Error al enviar datos:", error);
       alert("Error al enviar datos");
     }
   };
+
 
   return (
     <Fragment>
@@ -42,7 +61,7 @@ export default function Inbox() {
                 className=" w-full  md:mx-auto bg-base-400 h-full grid grid-rows-auto gap-5 grid-cols-1 md:grid-cols-3 place-items-center place-content-start rounded-lg "
               >
                 <h1 className="text-primary uppercase antialised text-5xl md:col-span-3  mx-auto text-center font-bold">
-                  Ingresar Matrix de simulacion
+                  Ingresar Vector de simulacion
                 </h1>
                 <label className="form-control col-span-3 w-full max-w-xs">
                   <div className="label">
@@ -78,7 +97,7 @@ export default function Inbox() {
           {resultado && (
             <Whitecard>
               <p className="text-black text-center">
-                El resultado es: {resultado}
+                El resultado es: {resultado.join(" , ")}
               </p>
             </Whitecard>
           )}
