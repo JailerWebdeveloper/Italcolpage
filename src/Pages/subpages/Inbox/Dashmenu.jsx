@@ -17,8 +17,6 @@ import {
 } from "recharts";
 
 const Dashmenu = () => {
-
-
   const [arreglo, setarreglo] = useState({});
   const [formData, setFormData] = useState({
     rataAprendizaje: "",
@@ -26,8 +24,8 @@ const Dashmenu = () => {
     errorMaximo: "",
   });
 
-  const[grafo,setgrafo]=useState([])
-  const[iteracion, setiteracion]=useState([])
+  const [grafo, setgrafo] = useState([]);
+  const [iteracion, setiteracion] = useState([]);
 
   const [File, setFile] = useState(null);
 
@@ -72,7 +70,7 @@ const Dashmenu = () => {
           },
         }
       );
-      const mamada = await axios.get(
+      const precarga = await axios.get(
         "http://localhost:3001/API/V1/obtener-archivo"
       );
       const respuesta = await axios.get(
@@ -91,14 +89,16 @@ const Dashmenu = () => {
       const exportardatos = await axios.get(
         "http://localhost:3001/API/V1/Exportardatos"
       );
-      setiteracion(exportardatos.data.erroresIteracion)
+      setiteracion(exportardatos.data.erroresIteracion);
 
-      const nuevoGrafo = exportardatos.data.erroresIteracion.map((element, index) => ({
-        name: index,
-        ErrorIteracion: element,
-        ErrorMaximo: arreglo.errorMaximo
-      }));
-  
+      const nuevoGrafo = exportardatos.data.erroresIteracion.map(
+        (element, index) => ({
+          name: index,
+          ErrorIteracion: element,
+          ErrorMaximo: arreglo.errorMaximo,
+        })
+      );
+
       setgrafo(nuevoGrafo);
     }
   };
@@ -137,6 +137,7 @@ const Dashmenu = () => {
 
                 <label className="form-control w-full max-w-xs">
                   <div className="label">
+                    n
                     <span className="label-text">
                       Ingresar la rata de aprendizaje
                     </span>
